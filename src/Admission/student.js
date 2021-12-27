@@ -1,6 +1,4 @@
 import { useState } from "react";
-
-
 export default function Student(props) {
   const [inputs, setInputs] = useState({ studentname: props.studentname, fathername: props.fathername, mothername: props.mothername, address: props.address });
 
@@ -16,16 +14,11 @@ export default function Student(props) {
     // this.props.enroll(inputs)
 
   }
-
-
-
-
   return (
     <form onSubmit={handleSubmit}>
-      <div>
-        <h1>Student Addmision form</h1>
-      </div>
+      <h1>STUDENT ADMISSION</h1>
       <label>Student Name:</label>
+
       <input
         type="text"
         name="studentname"
@@ -60,7 +53,8 @@ export default function Student(props) {
           name="address"
           value={inputs.address || ""}
           onChange={handleChange}
-        />
+  
+  />
       </div>
       <div>
         <label>DOB:</label>
