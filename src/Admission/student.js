@@ -22,6 +22,9 @@ export default function Student(props) {
 
   return (
     <form onSubmit={handleSubmit}>
+      <div>
+        <h1>Student Addmision form</h1>
+      </div>
       <label>Student Name:</label>
       <input
         type="text"

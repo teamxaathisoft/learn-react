@@ -1,9 +1,17 @@
  import { React } from "react";
+ import Student from "../Admission/student";
+ import StudentForm from "../Admission/schoolform";
   export default function Home(){
      return(
          <div>
-         <h1>Home</h1>
-         <p>This is a home page</p>
+        
+        
+        <StudentForm></StudentForm>
+        
+         <div>
+             
+             <Student></Student>
+         </div>
          </div>
      )
  }
