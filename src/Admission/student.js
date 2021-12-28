@@ -1,4 +1,8 @@
 import { useState } from "react";
+import Inputsdata from "./inputsdata";
+import  EnrollTable from "../Admission/enrolltable";
+
+
 export default function Student(props) {
   const [inputs, setInputs] = useState({ studentname: props.studentname, fathername: props.fathername, mothername: props.mothername, address: props.address });
 
@@ -9,16 +13,22 @@ export default function Student(props) {
   }
 
   const handleSubmit = (event) => {
+    debugger;
     event.preventDefault();
     console.log(inputs);
-    // this.props.enroll(inputs)
-
+    props.enroleStudent(inputs);
   }
+
+
+
+
   return (
     <form onSubmit={handleSubmit}>
-      <h1>STUDENT ADMISSION</h1>
+      <div>
+        <h1>Student Addmision form</h1>
+        
+      </div>
       <label>Student Name:</label>
-
       <input
         type="text"
         name="studentname"
@@ -53,8 +63,7 @@ export default function Student(props) {
           name="address"
           value={inputs.address || ""}
           onChange={handleChange}
-  
-  />
+        />
       </div>
       <div>
         <label>DOB:</label>
@@ -67,7 +76,7 @@ export default function Student(props) {
       </div>
 
       <div>
-        <button> Enrollment </button>
+        <button onClick={() => (" EnrollTable")}> Enrollment </button>
         <button> Remove </button>
       </div>
     </form>
