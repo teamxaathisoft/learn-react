@@ -26,12 +26,19 @@ export default class Enrollment extends Component {
   };
     this.hideComponent = this.hideComponent.bind(this);
     this.enroleStudent = this.enroleStudent.bind(this);
+    this.removeStudent = this.removeStudent.bind(this);
 
   }
   enroleStudent(student){
     this.state.SchoolData.Student.push(student);
     this.setState({Students:this.state.SchoolData.Student});
   }
+  removeStudent(){
+    debugger;
+     this.state.SchoolData.Student.pop();
+     this.setState({Students:this.state.SchoolData.Student});
+  }
+  
   hideComponent(name) {
     console.log(name);
     switch (name) {
@@ -64,7 +71,7 @@ export default class Enrollment extends Component {
           </button>
 
         <hr />
-        {showHideStudent && <Student enroleStudent={this.enroleStudent} />}
+        {showHideStudent && <Student removeStudent={this.removeStudent} enroleStudent={this.enroleStudent} />}
         <hr />
         
         <div>

@@ -12,6 +12,7 @@ export default function EnrollTable(props){
             <th>Fathername:<input type='text' value={student.fathername}/></th>
             <th>Mothername:<input type='text' value={student.mothername}/></th>
             <th>Address:<input type='text' value={student.address}/></th>
+            <th>DOB:<input type='text' value={student.dob}/></th>
           </tr>
 
           ))

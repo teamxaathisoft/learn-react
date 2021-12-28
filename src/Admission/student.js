@@ -4,7 +4,7 @@ import  EnrollTable from "../Admission/enrolltable";
 
 
 export default function Student(props) {
-  const [inputs, setInputs] = useState({ studentname: props.studentname, fathername: props.fathername, mothername: props.mothername, address: props.address });
+  const [inputs, setInputs] = useState({ studentname: props.studentname, fathername: props.fathername, mothername: props.mothername, address: props.address ,dob:props.dob});
 
   const handleChange = (event) => {
     const name = event.target.name;
@@ -16,7 +16,14 @@ export default function Student(props) {
     debugger;
     event.preventDefault();
     console.log(inputs);
+    //props.enroleStudent(inputs);
+  }
+  const handleAdd =(event)=>{
+    debugger;
     props.enroleStudent(inputs);
+  }
+  const handleRemove =(event)=>{
+    props.removeStudent();
   }
 
 
@@ -34,7 +41,7 @@ export default function Student(props) {
         name="studentname"
         value={inputs.studentname || ""}
         onChange={handleChange}
-      />
+      />  
 
       <div>
         <label>Father name:</label>
@@ -69,16 +76,18 @@ export default function Student(props) {
         <label>DOB:</label>
         <input
           type="date"
-          name="address"
-          value={inputs.address || ""}
+          name="dob"
+          value={inputs.dob || ""}
           onChange={handleChange}
         />
       </div>
 
       <div>
-        <button onClick={() => (" EnrollTable")}> Enrollment </button>
-        <button> Remove </button>
+        <button onClick={(event) => handleAdd(event)}> Enroll </button>
+        <button onClick={(event)=> handleRemove(event)}> Remove </button>
       </div>
+      
+     
     </form>
   )
 }
