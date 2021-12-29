@@ -7,7 +7,6 @@ export default function EnrollTable(props){
         <table>
           {
           props.students.map(student=>(
-
             
           <tr>
             <th>Name:<input type='text' value={student.studentname}/></th>
