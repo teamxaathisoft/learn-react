@@ -34,6 +34,7 @@ import Contact from './pagestask/contact';
 import Layout from "./pagestask/layout";
 import Dog from "./pagestask/Dog";
 import Nopage from "./pagestask/Nopage";
+import MuiForm from "./pagestask/muiform";
 
 
 
@@ -49,6 +50,7 @@ function App() {
           <Route path="contact" element={<Contact />} />
           <Route path="Dog" element={<Dog />} />
           <Route path="Nopage" element={<Nopage />} />
+          <Route path="muiform" element={<MuiForm/>}/>
         
         
               </Route>
