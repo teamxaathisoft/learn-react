@@ -113,7 +113,7 @@ export default function Postform(props) {
           onChange={handleChange}
         />
       </div>
-
+      
       <div>
         <button onClick={(event) => handleAdd(event)}> Enroll </button>
         <button onClick={(event)=> handleRemove(event)}> Remove </button>
