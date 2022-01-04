@@ -120,7 +120,6 @@ export default function Postform(props) {
       </div>
     <div>
     <button onClick={(event) => handleSubmit(event)}> Submit </button>
-
       </div>     
      
     </form>
