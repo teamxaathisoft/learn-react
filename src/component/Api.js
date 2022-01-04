@@ -2,6 +2,8 @@ import React from "react";
 import User from "./browser";
 import { useEffect, useState } from 'react';
 import axios from "axios";
+import Comment from "./comment";
+
 export default function Api(props){
    let UserList="";
    const [employees, setEmployees] = useState([]);
@@ -30,7 +32,8 @@ export default function Api(props){
 
     return(
         <div>
-            <FetchUsers/>
+            {/* <FetchUsers/> */}
+            <FetchComments></FetchComments>
             <h2>Home Page</h2>
             <p>This is home page</p>
             <p>User Data List goes here</p>
@@ -56,3 +59,21 @@ function FetchUsers() {
       </div>
     );
   }
+
+function FetchComments() {
+    const [comments, setComments] = useState([]);
+    useEffect(() => {
+      async function fetchCommentData() {
+        const response = await fetch('https://gorest.co.in/public/v1/posts/123/comments');
+        const { data } = await response.json(response);
+        setComments(data);
+      }
+      fetchCommentData();
+    }, []);
+    return (
+      <div>
+        {comments.map(d => <Comment id={d.id} post_id={d.post_id} name={d.name} email={d.email} body={d.body} />)}
+      </div>
+    );
+  }
+  
