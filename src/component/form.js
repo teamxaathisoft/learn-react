@@ -15,6 +15,7 @@ export default function MyForm(props) {
     event.preventDefault();
     console.log(inputs);
   }
+  
 
   return (
     <form onSubmit={handleSubmit}>

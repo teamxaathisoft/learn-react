@@ -1,6 +1,4 @@
  import { React } from "react";
- import SchoolInformation from "../studenttask/schoolinformation";
- import Student from"../Admission/student";
 import Enrollment from "../Admission/enrollment";
  
  export default function Nopage(){

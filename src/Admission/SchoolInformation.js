@@ -39,35 +39,12 @@ export default function SchoolInformation(props) {
               Website:
             </label>
             <a href={props.website}>
-             {props.website}
+              {props.website}
             </a>
 
 
           </div>
-          {/* <div>
-            <label>
-              PrincipleNumber:
-            </label>
-            <input type="text" name="PrincipleNumber" value="8985623475" />
-          </div>
-          <div>
-            <label>
-              SecrateryNumber:
-            </label>
-            <input type="text" name="SecrateryNumber" value="BKN" />
-          </div>
-          <div>
-            <label>
-              No.of.classes:
-            </label>
-            <input type="text" name=" No.of.classes" value="20" />
-          </div>
-          <div>
-            <label>
-              No.of.teacher:
-            </label>
-            <input type="text" name=" No.of.teacher" value="40" />
-          </div> */}
+
 
         </form>
 

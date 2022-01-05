@@ -20,6 +20,9 @@
            <li>
                <Link to="/Dog">Dog</Link>
            </li>
+           <li>
+             <Link to="/muiform">MuiForm</Link>
+           </li>
          </ul>
        </nav>
 

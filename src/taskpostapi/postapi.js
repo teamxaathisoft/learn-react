@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios";
-import { useEffect, useState } from 'react';
+import {  useState } from 'react';
 
 
 
@@ -19,9 +19,7 @@ export default function Postapi() {
         console.log(inputs);
        
         debugger;
-        // POST request using axios with set headers
-        //const article1 = { title: 'React POST Request Example' };
-       // const data = {"id":1454,"post_id":123,"name":"senthillkumar","email":"abc@gmail.com","body":"welcome to aathisoft.com"}
+       
         const data = {
         
             "id":1454,
@@ -33,7 +31,7 @@ export default function Postapi() {
    
         };
         const headers = {
-            'Authorization': 'Bearer 777a89a3f6edb99788713f0b4ffa1cb2d7f240ed6b9eaf58297d51b64e1c6423',
+            'Authorization': 'Bearer 3bf677896018ce6e6b691b6daff346b1cf1c99e3c61bf546d82dcee860191fe3',
             'My-Custom-Header': 'foobar'
         };
         console.log(data)
@@ -42,35 +40,11 @@ export default function Postapi() {
                 debugger;
                 console.log(response);
 
-                //this.setState({ articleId: response.data.id });
+               
             });
     }
 
-    //   useEffect(()=>{
-    //     debugger;
-    //      // POST request using axios with set headers
-    //      //const article1 = { title: 'React POST Request Example' };
-    //      const article = {
-    //       "id":inputs.Id,
-    //       "user_id":inputs.User_id,
-    //       "title":inputs.Title,
-    //       "due_on":inputs.Due_on,
-    //       "status": inputs.Status
-
-    //    };
-    //      const headers = { 
-    //          'Authorization': 'Bearer 777a89a3f6edb99788713f0b4ffa1cb2d7f240ed6b9eaf58297d51b64e1c6423',
-    //          'My-Custom-Header': 'foobar'
-    //      };
-    //      axios.post('https://gorest.co.in/public/v1/users/123/todos', article, { headers })
-    //          .then(response => {
-    //            console.log(response);
-
-    //             //this.setState({ articleId: response.data.id });
-    //             });
-
-    //   });
-
+   
 
     return (
         <form>
@@ -85,7 +59,7 @@ export default function Postapi() {
                 onChange={handleChange}
             />
 
-            <div>
+            <div> 
                 <label>Email:</label>
 
                 <input

@@ -6,14 +6,15 @@ import Student from "./student";
 
 
 export default class Enrollment extends Component {
-  constructor() {
+   constructor() {
     super();
     this.state = {
-      name: "React",
+       name: "React",
       showHideSchool: true,
       showHidesStudent: false,
       SchoolData:{
         School:{
+
           name:"Aathisoft Metriculation",
           place:"Alangudi",
           phone:12323423,
@@ -70,9 +71,9 @@ export default class Enrollment extends Component {
             Enroll Student
           </button>
 
-        <hr />
+        <hr/>
         {showHideStudent && <Student removeStudent={this.removeStudent} enroleStudent={this.enroleStudent} />}
-        <hr />
+        <hr/>
         
         <div>
           {/* <button onClick={() => this.hideComponent("showHideSchool")}>
