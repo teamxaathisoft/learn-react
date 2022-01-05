@@ -29,7 +29,7 @@ export default function Postapi() {
             "name": inputs.name,
             "email": inputs.email,
             "body": inputs.body
-            
+        
 
         };
         const headers = {
