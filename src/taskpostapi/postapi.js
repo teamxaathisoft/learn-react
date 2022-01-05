@@ -30,7 +30,7 @@ export default function Postapi() {
             "email": inputs.email,
             "body": inputs.body
         
-
+   
         };
         const headers = {
             'Authorization': 'Bearer 777a89a3f6edb99788713f0b4ffa1cb2d7f240ed6b9eaf58297d51b64e1c6423',
